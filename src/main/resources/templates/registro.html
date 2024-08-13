@@ -9,42 +9,24 @@
 <body>
 <header th:include="~{../static/html/header.html}"></header>
 <section class="container p-5">
-    <form class="row g-3" th:action="@{/registro}" method="post">
-        <div class="col-md-4">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
+    <form th:action="@{/registro}" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
-        <div class="col-md-4">
-            <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" required>
+        <div class="mb-3">
+            <label for="surname" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="surname" name="surname" required>
         </div>
-        <div class="col-md-4">
-            <label for="correo" class="form-label">Correo</label>
-            <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                <input type="text" class="form-control" id="correo" name="correo" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                <div class="invalid-feedback">
-                    Por favor, introduce un correo válido.
-                </div>
-            </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
         </div>
-        <div class="col-md-3">
-            <label for="pass" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="pass" name="password" aria-describedby="validationServer05Feedback" required>
-            <div id="pass" class="invalid-feedback">
-                Por favor, introduce una contraseña válida.
-            </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <div class="col-md-3">
-            <label for="confirmPass" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="confirmPass" name="confirmPassword" aria-describedby="validationServer06Feedback" required>
-            <div id="confirmPass" class="invalid-feedback">
-                Las contraseñas no coinciden.
-            </div>
-        </div>
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Registrar</button>
-        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
 </section>
 <footer th:include="~{../static/html/footer.html}"></footer>

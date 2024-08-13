@@ -24,7 +24,7 @@ public class UserService implements IUserService {
     @Override
     public Usuario register(Usuario user) {
         Rol role = new Rol();
-        role.setId(2L); // Suponiendo que el rol de usuario regular tiene ID 2
+        role.setId(2L); // Asume que el rol de usuario regular tiene ID 2
         user.setRoles(Collections.singleton(role));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
